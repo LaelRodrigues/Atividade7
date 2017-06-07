@@ -15,13 +15,14 @@ CFLAGS = -Wall -pedantic -ansi -std=c++11 -I. -I$(INC_DIR)
 
 .PHONY: all init clean doxy debug doc 
 
-all: init questao01 
+all: init questao01 questao02
 
 debug: CFLAGS += -g -O0
 debug: all
 
 init:
 	@mkdir -p $(OBJ_DIR)/questao01
+	@mkdir -p $(OBJ_DIR)/questao02
 	@mkdir -p $(BIN_DIR)/
 
 questao01: CFLAGS+= -I$(INC_DIR)/questao01
@@ -38,6 +39,18 @@ questao01: $(OBJ_DIR)/questao01/main.o
 $(OBJ_DIR)/questao01/main.o: $(SRC_DIR)/questao01/main.cpp $(INC_DIR)/questao01/intervalo.h
 	$(CC) -c $(CFLAGS) -o $@ $<
 
+questao02: CFLAGS+= -I$(INC_DIR)/questao02
+questao02: $(OBJ_DIR)/questao02/main.o
+	@echo "-----------------"
+	@echo "Alvo $@"
+	@echo "------------------"
+	$(CC) $(CFLAGS) -o $(BIN_DIR)/imprime $^
+	@echo "------------------"
+	@echo "+++ [Executavel 'imprime' criado em $(BIN_DIR)] +++"
+	@echo "------------------" 
+
+$(OBJ_DIR)/questao02/main.o: $(SRC_DIR)/questao02/main.cpp $(INC_DIR)/questao02/imprime.h
+	$(CC) -c $(CFLAGS) -o $@ $<	
 
 doxy:
 	doxygen -g
