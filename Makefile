@@ -15,7 +15,7 @@ CFLAGS = -Wall -pedantic -ansi -std=c++11 -I. -I$(INC_DIR)
 
 .PHONY: all init clean doxy debug doc 
 
-all: init questao01 questao02
+all: init questao01 questao02 questao03
 
 debug: CFLAGS += -g -O0
 debug: all
@@ -23,6 +23,7 @@ debug: all
 init:
 	@mkdir -p $(OBJ_DIR)/questao01
 	@mkdir -p $(OBJ_DIR)/questao02
+	@mkdir -p $(OBJ_DIR)/questao03
 	@mkdir -p $(BIN_DIR)/
 
 questao01: CFLAGS+= -I$(INC_DIR)/questao01
@@ -52,6 +53,22 @@ questao02: $(OBJ_DIR)/questao02/main.o
 $(OBJ_DIR)/questao02/main.o: $(SRC_DIR)/questao02/main.cpp $(INC_DIR)/questao02/imprime.h
 	$(CC) -c $(CFLAGS) -o $@ $<	
 
+
+questao03: CFLAGS+= -I$(INC_DIR)/questao03
+questao03: $(OBJ_DIR)/questao03/rpn.o $(OBJ_DIR)/questao03/main.o
+	@echo "-----------------"
+	@echo "Alvo $@"
+	@echo "------------------"
+	$(CC) $(CFLAGS) -o $(BIN_DIR)/rpn $^
+	@echo "------------------"
+	@echo "+++ [Executavel 'rpn' criado em $(BIN_DIR)] +++"
+	@echo "------------------" 
+
+$(OBJ_DIR)/questao03/rpn.o: $(SRC_DIR)/questao03/rpn.cpp $(INC_DIR)/questao03/rpn.h
+	$(CC) -c $(CFLAGS) -o $@ $<	
+
+$(OBJ_DIR)/questao03/main.o: $(SRC_DIR)/questao03/main.cpp
+	$(CC) -c $(CFLAGS) -o $@ $<	
 doxy:
 	doxygen -g
 
