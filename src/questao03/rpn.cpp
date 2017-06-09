@@ -67,7 +67,7 @@ int calcValorExpressao(int tam, char **argumentos) {
 			pilha.pop();
 			pilha.push(operador1 - operador2);
 		}
-		else if(strcmp(argumentos[i], ".") == 0) {
+		else if(strcmp(argumentos[i], "x") == 0) {
 			if(pilha.size() < 2) {
 				cout << "Erro: A ordem dos paramentros e invalida." << endl;
 				exit(1);
