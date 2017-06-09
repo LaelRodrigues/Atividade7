@@ -1,5 +1,5 @@
 /**
- * @file	main.cpp
+ * @file	main3.cpp
  * @brief	Codigo fonte de teste da funcao que calcula o
  *			valor de uma determinada expressao escrita na 
  *			notacao polonesa inversa

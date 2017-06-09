@@ -1,7 +1,7 @@
 /**
- * @file	main.cpp
- * @brief	Codigo fonte principal de teste da funcao
- *			closest2mean presente no arquivo intervalo.h
+ * @file	main1.cpp
+ * @brief	Codigo fonte de teste da funcao closest2mean
+ *			presente no arquivo intervalo.h
  * @author	LaelRodrigues (laelRodrigues7@gmail.com)
  * @since	06/06/2017
  * @date	06/06/2017
