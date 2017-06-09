@@ -1,6 +1,6 @@
 Propósito:
 
-O objetivo do código é trasformar os valores da sequência que vai de 1 a 9, para seus respectivos valores na forma quadratica.
+O objetivo do código é transformar os valores da sequência que vai de 1 a 9, para seus respectivos valores na forma quadratica.
 
 Uso dos elementos da stl:
 
@@ -8,6 +8,6 @@ Vector:	container ultilizado para armazerna duas sequencias a primeira com valor
 
 Transform: algoritmo que aplica a função square no vector col e gera o resultado no vector col2.
 
-back_inserter: iterador de inserção que tem a finalidade de inserir os elementos na forma quadratico no vector col2.
+back_inserter: iterador de inserção que tem a finalidade de inserir os elementos na forma quadratica no vector col2.
 
 
