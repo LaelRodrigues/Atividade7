@@ -5,20 +5,13 @@
  *			proximo da media do intervalo.
  * @author	LaelRodrigues (laelrodrigues7@gmail.com)
  * @since	05/06/2017
- * @date	05/06/2017
+ * @date	08/06/2017
  */	
 
-#include <typeinfo> 
 
 #ifndef INTERVALO_H
 #define INTERVALO_H
 
-#include <vector>
-using std::vector;
-
-#include <iostream>
-using std::cout;
-using std::endl;
 
 /**
  * @brief funcao que encontra o elemento do intervalo cujo

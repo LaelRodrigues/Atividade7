@@ -4,7 +4,7 @@
  *			de um container  
  * @author	LaelRodrigues (laelrodrigues7@gmail.com)
  * @since	06/06/2017
- * @date	06/06/2017
+ * @date	08/06/2017
  */	
 
 #ifndef IMPRIME_H

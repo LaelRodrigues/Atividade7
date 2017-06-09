@@ -1,11 +1,11 @@
 /**
  * @file	rpn.h
- * @brief	Declaracao dos prototipo da funcao que permite  
+ * @brief	Declaracao dos prototipo da funcao que  
  * 			calcular o valor de um derminada expressao
  *			escrita na notacao polonesa inversa 
  * @author	Lael Rodrigues (laelrodrigues7@gmail.com)
  * @since	07/06/2017
- * @date	07/06/2017
+ * @date	08/06/2017
  */
 
 #ifndef RPN_H
